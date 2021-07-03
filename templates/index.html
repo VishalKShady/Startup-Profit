@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Prediction Page</title>
+</head>
+<body>
+
+    <div class='login'>
+        <h1>Predict Profit Using RnD, Spend,Administration,Marketing and State</h1>
+    
+        <form action = "{{ url_for('predict')}}" method="post">
+            
+            <input type="text" name="R&D Spend" placeholder = "R&D Spend" request= "required" />Input Integer values<br>
+            <input type="text" name="Administration" placeholder = "Administration" request= "required" />Input Integer values<br>
+            <input type="text" name="Marketing Spend" placeholder = "Marketing Spend" request= "required" />Input Integer values<br>
+            <input type="text" name="State" placeholder = "State" request= "required" />Input 0/1/2<br><br>
+    
+            <button type="submit", class = "btn btn-primary btn-block btn-large">Predict</button>
+    
+        </form>
+    
+    
+        <br>
+        <br>
+        {{prediction_text}}
+    </div>
+    <br><br><br><br>
+    <h1>Shady</h1>
+
+
+</body>
+</html>
